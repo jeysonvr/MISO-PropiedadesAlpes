@@ -1,0 +1,43 @@
+ContextMap RealStateContextMap {
+	type = SYSTEM_LANDSCAPE
+	state = AS_IS
+
+	contains FieldResearchContext, StatesContext, TransactionsContext, InformationSourcesContext, CompaniesContext, TransactionsAnalyticsContext
+
+    FieldResearchContext <-> StatesContext
+    StatesContext <-> TransactionsAnalyticsContext
+    StatesContext <-> TransactionsContext
+    TransactionsContext <-> TransactionsAnalyticsContext
+    TransactionsContext <-> CompaniesContext
+    TransactionsContext <-> InformationSourcesContext
+
+}
+
+
+
+/* Bounded Context Definitions */
+BoundedContext FieldResearchContext {
+    domainVisionStatement = ""
+}
+
+BoundedContext StatesContext { //Propiedades
+    domainVisionStatement = ""
+}
+
+BoundedContext TransactionsContext {
+    domainVisionStatement = ""
+}
+
+BoundedContext InformationSourcesContext {
+    domainVisionStatement = ""
+}
+
+BoundedContext CompaniesContext {
+    domainVisionStatement = ""
+}
+
+BoundedContext TransactionsAnalyticsContext {
+    domainVisionStatement = ""
+}
+
+

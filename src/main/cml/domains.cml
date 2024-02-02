@@ -27,10 +27,10 @@ Domain RealState {
     }
   }
 
-  Subdomain TenantDomain {
+  Subdomain CompanyDomain {
     type = SUPPORTING_DOMAIN
-    domainVisionStatement = "Tenant (Inquilinos): Gestión y actualización de los inquilinos a partir del contacto directo o indirecto por medio de información expuesta en redes sociales y sitios web."
-    Entity Tenant {
+    domainVisionStatement = "Company (Compañias): Gestión y actualización de llas compañias (arrendatario, inquilino, vendedor, comprador, entre otros) a partir del contacto directo o indirecto por medio de información expuesta en redes sociales y sitios web."
+    Entity Company {
       String firstname
       String lastname
       Integer identificationnumber
@@ -54,10 +54,10 @@ Domain RealState {
 
 }
 
-UserStory CreateTenant {
+UserStory CreateCompany {
   As a "Real state employee"
-    I want to "create" a "Tenant" with its "firstname", "lastname", "identificationnumber"
-  so that "I am able to manage the tenants data and offer them lease contracts."
+    I want to "create" a "Company" with its "firstname", "lastname", "identificationnumber"
+  so that "I am able to manage the companies data and offer them lease contracts."
 }
 
 UserStory CreateProperty {
