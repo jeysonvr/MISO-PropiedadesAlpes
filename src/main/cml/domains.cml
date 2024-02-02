@@ -1,0 +1,79 @@
+Domain RealState {
+  domainVisionStatement = "RealState (Bienes raíces): El enfoque principal de la compañía es el de proveer información sobre bienes raíces comerciales como detalle de las propiedades, listas de alquiler, venta y subarriendos, transacciones sobre arrendamientos, y comparativos de ventas"
+
+  Subdomain FieldResearchDomain {
+    type = SUPPORTING_DOMAIN
+    domainVisionStatement = "FieldResearch (Investigación de campo): Se encarga de las inspecciones físicas de estructuras de oficina, industriales y minoristas en cada área metropolitana. Se investigan características físicas (tamaño, tipo de construcción, zonificación, tamaño del lote, número de pisos, etc), y se recopilan fotografías."
+  }
+
+  Subdomain RentalListingDomain {
+    type = GENERIC_SUBDOMAIN
+    domainVisionStatement = "RentalListing (Listados de alquiler): Identificar, ingresar y mantener los listados de alquiler, subarrendamiento, venta y trabajo conjunto."
+    Entity Property {
+      String address
+      String zone
+      String city
+      String country
+    }
+  }
+
+  Subdomain TransactionsDomain {
+    type = GENERIC_SUBDOMAIN
+    domainVisionStatement = "Transactions (Transacciones): Adquirir e ingresar arrendamientos registrados para oficinas y propiedades industriales, los cuales se monitorean periódicamente para actualizar nuevos arrendamientos, extensiones, vencimientos, etc."
+    Entity Transaction {
+      String transactiontype
+      String buyer
+      String seller
+    }
+  }
+
+  Subdomain TenantDomain {
+    type = SUPPORTING_DOMAIN
+    domainVisionStatement = "Tenant (Inquilinos): Gestión y actualización de los inquilinos a partir del contacto directo o indirecto por medio de información expuesta en redes sociales y sitios web."
+    Entity Tenant {
+      String firstname
+      String lastname
+      Integer identificationnumber
+    }
+  }
+
+  Subdomain SalesComparisonsDomain {
+    type = CORE_DOMAIN
+    domainVisionStatement = "SalesComparisons (Comparativo de ventas): Mantenimiento del histórico de ventas y recopilación de información detallada de comprador, vendedor, material de mercado y noticias en los medios."
+  }
+
+  Subdomain MarketAndPropertyAnalysisDomain {
+    type = CORE_DOMAIN
+    domainVisionStatement = "MarketAndPropertyAnalysis (Análisis de mercado y propiedades): Acceso al desgloce de información de propiedades principales como de mercado de las agencias, tendencias históricas de arrendamiento y venta, comparación de tarifas promedio, duración promedio de los acuerdos, tasas de desocupación y más."
+    Entity Customer {
+      String firstname
+      String lastname
+      Integer identificationnumber
+    }
+  }
+
+}
+
+UserStory CreateTenant {
+  As a "Real state employee"
+    I want to "create" a "Tenant" with its "firstname", "lastname", "identificationnumber"
+  so that "I am able to manage the tenants data and offer them lease contracts."
+}
+
+UserStory CreateProperty {
+  As a "Real state employee"
+    I want to "create" a "Property" with its "address", "zone", "city", "country"
+  so that "I am able to manage the properties data."
+}
+
+UserStory CreateCustomer {
+  As a "Real state employee"
+    I want to "create" a "Customer" with its "firstname", "lastname", "identificationnumber"
+  so that "I am able to manage the customers data and offer them information related with the properties."
+}
+
+UserStory CreateTransaction {
+  As a "Real state employee"
+    I want to "create" a "Transaction" with its "transactiontype", "buyer", "seller"
+  so that "I am able to keep a transaction history"
+}
