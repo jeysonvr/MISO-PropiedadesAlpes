@@ -4,12 +4,13 @@ ContextMap RealStateContextMap {
 
 	contains FieldResearchContext, StatesContext, TransactionsContext, InformationSourcesContext, CompaniesContext, TransactionsAnalyticsContext
 
-    FieldResearchContext <-> StatesContext
-    StatesContext <-> TransactionsAnalyticsContext
-    StatesContext <-> TransactionsContext
-    TransactionsContext <-> TransactionsAnalyticsContext
-    TransactionsContext <-> CompaniesContext
-    TransactionsContext <-> InformationSourcesContext
+    FieldResearchContext [SK] <-> [SK] StatesContext
+    StatesContext [SK] <-> [SK] TransactionsAnalyticsContext
+    StatesContext [SK] <-> [SK] TransactionsContext
+    TransactionsContext [SK] <-> [SK] TransactionsAnalyticsContext
+    TransactionsContext [SK] <-> [SK] CompaniesContext
+    CompaniesContext [SK] <-> [SK] TransactionsAnalyticsContext
+    TransactionsContext [SK] <-> [SK] InformationSourcesContext
 
 }
 
