@@ -18,27 +18,25 @@ ContextMap RealStateContextMap {
 
 /* Bounded Context Definitions */
 BoundedContext FieldResearchContext {
-    domainVisionStatement = ""
+    domainVisionStatement = "FieldResearch (Investigación de campo): Se encarga de las inspecciones físicas de estructuras de oficina, industriales y minoristas en cada área metropolitana. Se investigan características físicas (tamaño, tipo de construcción, zonificación, tamaño del lote, número de pisos, etc), y se recopilan fotografías."
 }
 
 BoundedContext StatesContext { //Propiedades
-    domainVisionStatement = ""
+    domainVisionStatement = "States (Propiedades): Se encarga de recpilar toda la informacion de las propiedades, sus caracteristicas como tamaño, tipo de construcción, zonificación, disponibilidad, tamaño del lote, número de pisos, estacionamiento y más."
 }
 
 BoundedContext TransactionsContext {
-    domainVisionStatement = ""
+    domainVisionStatement = "Transactions (Transacciones): Tiene toda la información sobre los alquileres y ventas. Se encarga de adquirir e ingresar arrendamientos o ventas registrados para oficinas y propiedades industriales, los cuales se monitorean periódicamente para actualizar nuevos arrendamientos, extensiones, vencimientos, etc."
 }
 
 BoundedContext InformationSourcesContext {
-    domainVisionStatement = ""
+    domainVisionStatement = "Obtencion de la informacion de las diferentes propiedades, transacciones o datos necesarios para proveer una vista centralizada de todos los servicios que ofrece la empresa. Hace referencia a la obtencion de datos en fuentes de datos automatizados o semiautomatizados"
 }
 
 BoundedContext CompaniesContext {
-    domainVisionStatement = ""
+    domainVisionStatement = "Company (Compañias): Gestión y actualización de las compañias (arrendatario, inquilino, vendedor, comprador, entre otros) a partir del contacto directo o indirecto por medio de información expuesta en redes sociales y sitios web."
 }
 
 BoundedContext TransactionsAnalyticsContext {
-    domainVisionStatement = ""
+    domainVisionStatement = "TransactionsAnalytics (Análisis de transacciones): Analisis de la información de propiedades, tendencias históricas de arrendamiento y venta, comparación de tarifas promedio, duración promedio de los acuerdos, tasas de desocupación., comparativo de ventas y todo lo referente a obtener resultados de la información obtenida "
 }
-
-
