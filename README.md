@@ -10,3 +10,5 @@ Propiedades de los Alpes es un proyecto de estudio de la Universidad de los Ande
 ## Archivos importantes
 En la carpeta `src/main/cml` se encuentran los archivos `.cml` como:
 * `domains.cml`: Dominios y subdominios con su respectiva visión statement y algunas entidades e historias de usuario identificadas durante la etapa inicial.
+* `bounded-context-as-is.cml`: Diagrama de contextos acotados en estado AS-IS
+* `bounded-context-to-be.cml`: Diagrama de contextos acotados en estado TO-BE
