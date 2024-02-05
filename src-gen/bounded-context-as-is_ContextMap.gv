@@ -1,0 +1,16 @@
+digraph "ContextMapGraph" {
+graph ["imagepath"="/tmp/GraphvizJava"]
+"CompaniesContext" ["margin"="0.3","orientation"="2","shape"="egg","fontsize"="16","style"="bold","label"="CompaniesContext\n","fontname"="sans-serif"]
+"TransactionsAnalyticsContext" ["margin"="0.3","orientation"="173","shape"="egg","fontsize"="16","style"="bold","label"="TransactionsAnalyticsContext\n","fontname"="sans-serif"]
+"FieldResearchContext" ["margin"="0.3","orientation"="348","shape"="egg","fontsize"="16","style"="bold","label"="FieldResearchContext\n","fontname"="sans-serif"]
+"StatesContext" ["margin"="0.3","orientation"="124","shape"="egg","fontsize"="16","style"="bold","label"="StatesContext\n","fontname"="sans-serif"]
+"TransactionsContext" ["margin"="0.3","orientation"="325","shape"="egg","fontsize"="16","style"="bold","label"="TransactionsContext\n","fontname"="sans-serif"]
+"InformationSourcesContext" ["margin"="0.3","orientation"="222","shape"="egg","fontsize"="16","style"="bold","label"="InformationSourcesContext\n","fontname"="sans-serif"]
+"CompaniesContext" -> "TransactionsAnalyticsContext" ["fontsize"="12","style"="bold","label"="Shared Kernel","dir"="none","fontname"="sans-serif"]
+"FieldResearchContext" -> "StatesContext" ["fontsize"="12","style"="bold","label"="Shared Kernel","dir"="none","fontname"="sans-serif"]
+"StatesContext" -> "TransactionsContext" ["fontsize"="12","style"="bold","label"="Shared Kernel","dir"="none","fontname"="sans-serif"]
+"StatesContext" -> "TransactionsAnalyticsContext" ["fontsize"="12","style"="bold","label"="Shared Kernel","dir"="none","fontname"="sans-serif"]
+"TransactionsContext" -> "CompaniesContext" ["fontsize"="12","style"="bold","label"="Shared Kernel","dir"="none","fontname"="sans-serif"]
+"TransactionsContext" -> "InformationSourcesContext" ["fontsize"="12","style"="bold","label"="Shared Kernel","dir"="none","fontname"="sans-serif"]
+"TransactionsContext" -> "TransactionsAnalyticsContext" ["fontsize"="12","style"="bold","label"="Shared Kernel","dir"="none","fontname"="sans-serif"]
+}
